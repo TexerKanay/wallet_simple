@@ -3,17 +3,17 @@ import 'package:provider/provider.dart';
 import '../providers/crypto_provider.dart';
 import '../widgets/crypto_card.dart';
 import 'crypto_detail_screen.dart';
-import 'portfolio_screen.dart';
 
-// Главный экран со списком криптовалют
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+
+// Экран со списком криптовалют (Рынки)
+class MarketsScreen extends StatefulWidget {
+  const MarketsScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<MarketsScreen> createState() => _MarketsScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _MarketsScreenState extends State<MarketsScreen> {
   @override
   void initState() {
     super.initState();
@@ -27,19 +27,12 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Криптовалюты'),
+        title: const Text('Рынки'),
+        centerTitle: false,
         actions: [
           IconButton(
-            icon: const Icon(Icons.account_balance_wallet),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const PortfolioScreen(),
-                ),
-              );
-            },
-            tooltip: 'Портфель',
+            icon: const Icon(Icons.search),
+            onPressed: () {},
           ),
         ],
       ),

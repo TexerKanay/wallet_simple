@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'providers/crypto_provider.dart';
 import 'providers/portfolio_provider.dart';
-import 'screens/home_screen.dart';
+import 'screens/main_screen.dart';
 import 'theme/app_theme.dart';
 
 // Точка входа в приложение
@@ -28,7 +28,7 @@ class CryptoApp extends StatelessWidget {
         // Применение темной темы в стиле криптобиржи
         theme: AppTheme.darkTheme,
         // Главный экран приложения
-        home: const HomeScreen(),
+        home: const MainScreen(),
       ),
     );
   }

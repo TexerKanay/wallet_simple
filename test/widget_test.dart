@@ -13,8 +13,10 @@ void main() {
   testWidgets('App starts correctly', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(const CryptoApp());
+    await tester.pumpAndSettle(const Duration(seconds: 2));
 
-    // Verify that the app title is displayed
-    expect(find.text('Криптовалюты'), findsOneWidget);
+    // Verify that the app starts and shows the Home Dashboard
+    expect(find.text('Депозит'), findsOneWidget);
+    expect(find.text('Горячие'), findsOneWidget);
   });
 }
